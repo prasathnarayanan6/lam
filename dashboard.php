@@ -423,15 +423,59 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                 <div class="card" style=""><!-- wave guide 1 card-->
                                 <div class="card-content"><!-- wg1 card content--->
                                     <div class="card-body"><!--- wg1 card body--->
-                                            <!-- <div class="media d-flex">
-                                                <div class="media-body text-left">
-                                                        <h6 class="danger text-dark">WaveGuide: xy1waveguide</h6>
-                                                </div>
-                                                <div class="ms-auto h1 pt-2">
-                                                    <h6 class="text-danger" id="text">(Offline)</h6>
-                                                </div>
-                                            </div> -->
-                                            
+                                            <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                        <div class="card-content">
+                                                            <div class="card-body">
+                                                            <div class="media d-flex">
+                                                                <div class="media-body text-left">
+                                                                        <h3 class="danger" id="s2">0</h3>
+                                                                        <span style="color:#152238">Faults/Errors</span>
+                                                                </div>
+                                                                <div class="ms-auto h1 pt-2 text-warning">
+                                                                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>  
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                        <div class="card-content">
+                                                            <div class="card-body">
+                                                            <div class="media d-flex">
+                                                                <div class="media-body text-left">
+                                                                        <h3 class="danger" id="s2">0</h3>
+                                                                        <span style="color:#152238">Faults/Errors</span>
+                                                                </div>
+                                                                <div class="ms-auto h1 pt-2 text-warning">
+                                                                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="col-md-4">
+                                                        <div class="card">
+                                                        <div class="card-content">
+                                                            <div class="card-body">
+                                                            <div class="media d-flex">
+                                                                <div class="media-body text-left">
+                                                                        <h3 class="danger" id="s2">0</h3>
+                                                                        <span style="color:#152238">Faults/Errors</span>
+                                                                </div>
+                                                                <div class="ms-auto h1 pt-2 text-warning">
+                                                                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>           
+                                            </div>  
                                     </div>
                                 </div>
                                 </div>  
