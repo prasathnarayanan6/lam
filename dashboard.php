@@ -40,7 +40,7 @@
 .tr:hover {
     transform: scale(1.05);
     background-color:  #152238;
-    color: white;
+    color: black;
  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
@@ -105,16 +105,16 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     <center><img src="./img/Lam_Research_logo.svg.png" width="70%"></img></center><br>
     <div class="position-sticky bg-white">
       <div class="list-group list-group-flush mx-3 mt-4">
-        <a onclick="window.location.href='dashboard.php'" class="list-group-item list-group-item-action zoom">
+        <a onclick="window.location.href='dashboard'" class="list-group-item list-group-item-action zoom">
           <i class="fas fa-tachometer-alt fa-fw me-3 mt-3"></i><span>Dashboard</span>
         </a>
-        <a onclick="window.location.href='reports.php'" class="list-group-item list-group-item-action zoom"><i
+        <a onclick="window.location.href='reports'" class="list-group-item list-group-item-action zoom"><i
             class=" fas fa-search-plus fa-fw me-3 mt-3"></i><span>Reports</span>
         </a>
-        <a onclick="window.location.href='graph.php'" class="list-group-item list-group-item-action zoom">
+        <a onclick="window.location.href='graph'" class="list-group-item list-group-item-action zoom">
           <i class="fas fa-chart-line fa-fw me-3 mt-3"></i><span>Graph</span>
         </a>
-        <a onclick="window.location.href='settings.php'" class="list-group-item list-group-item-action zoom"><i
+        <a onclick="window.location.href='settings'" class="list-group-item list-group-item-action zoom"><i
             class="fas fa-cog fa-spin fa-fw me-3 mt-3"></i><span>Settings</span>
         </a>
       </div>
@@ -144,16 +144,16 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                     // $num = mysqli_fetch_array($result); 
             ?>
             <div class="row"><!---row 1----------->
-                <div class="col-md-6"><!----first half---->
+                <div class="col-md-6" style=""><!----first half---->
                     <div class="row"><!----first half row 1--->
                     <!--box 1-->
                             <div class="col-xl-12 col-sm-12 col-12 mt-3"><!----first half col 1-->                               
-                                <div class="card" style=""><!-- wave guide 1 card-->
+                                <div class="card" style="background-color: #152238;"><!-- wave guide 1 card-->
                                 <div class="card-content"><!-- wg1 card content--->
                                     <div class="card-body"><!--- wg1 card body--->
                                             <div class="media d-flex">
                                                 <div class="media-body text-left">
-                                                        <h6 class="danger text-dark">WaveGuide: xy1waveguide</h6>
+                                                        <h6 class="danger text-white">WaveGuide: xy1waveguide</h6>
                                                 </div>
                                                 <div class="ms-auto h1 pt-2">
                                                     <h6 class="text-danger" id="text">(Offline)</h6>
@@ -161,16 +161,16 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                             </div>
                                             <div class="row">
                                                     <div class="col-md-6">
-                                                        <div class="card tr" style="background-color: #152238;">
+                                                        <div class="card tr" style="background-color: white;">
                                                             <div class="card-content">
                                                                 <div class="card-body">
                                                                 <div class="media d-flex">
                                                                     <div class="media-body text-left">
-                                                                            <h6 class="danger text-white">100°C</h6>
-                                                                            <span style="color:white;">Sensor 1</span>
+                                                                            <h6 class="danger text-dark">100°C</h6>
+                                                                            <span style="color:dark;">Sensor 1</span>
 
                                                                     </div>
-                                                                    <div class="ms-auto h1 pt-1 text-white">
+                                                                    <div class="ms-auto h1 pt-1 text-dark">
                                                                             <i class="fas fa-temperature-high"></i>
                                                                     </div>
                                                                 </div>
@@ -179,16 +179,16 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                            <div class="card tr" style="background-color: #152238;">
+                                                            <div class="card tr" style="background-color: white;">
                                                                     <div class="card-content">
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-white">100°C</h6>
-                                                                                    <span style="color:white;">Sensor 2</span>
+                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <span style="color:dark;">Sensor 2</span>
 
                                                                             </div>
-                                                                            <div class="ms-auto h1 pt-1 text-white">
+                                                                            <div class="ms-auto h1 pt-1 text-dark">
                                                                                     <i class="fas fa-temperature-high"></i>
                                                                             </div>
                                                                         </div>
@@ -199,16 +199,16 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                              </div><br>
                                              <div class="row">
                                                     <div class="col-md-6">
-                                                        <div class="card tr" style="background-color: #152238 ;">
+                                                        <div class="card tr" style="background-color: white;">
                                                             <div class="card-content">
                                                                 <div class="card-body">
                                                                 <div class="media d-flex">
                                                                     <div class="media-body text-left">
-                                                                            <h6 class="danger text-white">100°C</h6>
-                                                                            <span style="color:white;">Sensor 3</span>
+                                                                            <h6 class="danger text-dark">100°C</h6>
+                                                                            <span style="color:dark;">Sensor 3</span>
 
                                                                     </div>
-                                                                    <div class="ms-auto h1 pt-1 text-white">
+                                                                    <div class="ms-auto h1 pt-1 text-dark">
                                                                             <i class="fas fa-temperature-high"></i>
                                                                     </div>
                                                                 </div>
@@ -217,16 +217,15 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                            <div class="card tr" style="background-color: #152238 ;">
+                                                            <div class="card tr" style="background-color: white ;">
                                                                     <div class="card-content">
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-white">100°C</h6>
-                                                                                    <span style="color:white;">Sensor 4</span>
-
+                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <span style="color:dark;">Sensor 4</span>
                                                                             </div>
-                                                                            <div class="ms-auto h1 pt-1 text-white">
+                                                                            <div class="ms-auto h1 pt-1 text-dark">
                                                                                     <i class="fas fa-temperature-high"></i>
                                                                             </div>
                                                                         </div>
@@ -236,41 +235,28 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                     </div>
                                              </div><br>
                                              <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="card tr" style="background-color: #152238 ;">
-                                                            <div class="card-content">
-                                                                <div class="card-body">
-                                                                <div class="media d-flex">
-                                                                    <div class="media-body text-left">
-                                                                            <h6 class="danger text-white">100°C</h6>
-                                                                            <span style="color:white;">Sensor 5</span>
-
-                                                                    </div>
-                                                                    <div class="ms-auto h1 pt-1 text-white">
-                                                                            <i class="fas fa-temperature-high"></i>
-                                                                    </div>
-                                                                </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                            <div class="card tr" style="background-color: #152238 ;">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <center>
+                                                            <div class="col-md-6">
+                                                                    <div class="card tr" style="background-color:white;">
                                                                     <div class="card-content">
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-white">10-07-22_21:51:48</h6>
-                                                                                    <span style="color:white;">Last Data on:</span>
-
+                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <span style="color:dark;">Sensor 5</span>
                                                                             </div>
-                                                                            <div class="ms-auto h1 pt-1 text-white">
-                                                                                    <i class="far fa-clock fa-spin "></i>
+                                                                            <div class="ms-auto h1 pt-1 text-dark">
+                                                                                    <i class="fas fa-temperature-high"></i>
                                                                             </div>
                                                                         </div>
                                                                         </div>
                                                                     </div>
+                                                                    </div>
                                                             </div>
+                                                            </center>
+                                                        </div>
                                                     </div>
                                              </div>
                                     <!-- </div>
@@ -284,7 +270,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                         <div class="col-md-6">
                              <div class="row">
                              <div class="col-xl-12 col-sm-12 col-12 mt-3"><!----first half col 1-->                               
-                                <div class="card" style=""><!-- wave guide 1 card-->
+                                <div class="card" style="background-color: #152238;"><!-- wave guide 1 card-->
                                 <div class="card-content"><!-- wg1 card content--->
                                     <div class="card-body"><!--- wg1 card body--->
                                             <div class="media d-flex">
@@ -297,16 +283,16 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                             </div>
                                             <div class="row">
                                                     <div class="col-md-6">
-                                                        <div class="card tr" style="background-color: #152238;">
+                                                        <div class="card tr" style="background-color: white;">
                                                             <div class="card-content">
                                                                 <div class="card-body">
                                                                 <div class="media d-flex">
                                                                     <div class="media-body text-left">
-                                                                            <h6 class="danger text-white">100°C</h6>
-                                                                            <span style="color:white;">Sensor 1</span>
+                                                                            <h6 class="danger text-dark">100°C</h6>
+                                                                            <span style="color:black;">Sensor 1</span>
 
                                                                     </div>
-                                                                    <div class="ms-auto h1 pt-1 text-white">
+                                                                    <div class="ms-auto h1 pt-1 text-dark">
                                                                             <i class="fas fa-temperature-high"></i>
                                                                     </div>
                                                                 </div>
@@ -315,16 +301,16 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                            <div class="card tr" style="background-color: #152238;">
+                                                            <div class="card tr" style="background-color: white;">
                                                                     <div class="card-content">
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-white">100°C</h6>
-                                                                                    <span style="color:white;">Sensor 2</span>
+                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <span style="color:dark;">Sensor 2</span>
 
                                                                             </div>
-                                                                            <div class="ms-auto h1 pt-1 text-white">
+                                                                            <div class="ms-auto h1 pt-1 text-dark">
                                                                                     <i class="fas fa-temperature-high"></i>
                                                                             </div>
                                                                         </div>
@@ -335,16 +321,16 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                              </div><br>
                                              <div class="row">
                                                     <div class="col-md-6">
-                                                        <div class="card tr" style="background-color: #152238;">
+                                                        <div class="card tr" style="background-color: white;">
                                                             <div class="card-content">
                                                                 <div class="card-body">
                                                                 <div class="media d-flex">
                                                                     <div class="media-body text-left">
-                                                                            <h6 class="danger text-white">100°C</h6>
-                                                                            <span style="color:white;">Sensor 3</span>
+                                                                            <h6 class="danger text-dark">100°C</h6>
+                                                                            <span style="color:dark;">Sensor 3</span>
 
                                                                     </div>
-                                                                    <div class="ms-auto h1 pt-1 text-white">
+                                                                    <div class="ms-auto h1 pt-1 text-dark">
                                                                             <i class="fas fa-temperature-high"></i>
                                                                     </div>
                                                                 </div>
@@ -353,16 +339,16 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                            <div class="card tr" style="background-color: #152238;">
+                                                            <div class="card tr" style="background-color: white;">
                                                                     <div class="card-content">
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-white">100°C</h6>
-                                                                                    <span style="color:white;">Sensor 4</span>
+                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <span style="color:dark;">Sensor 4</span>
 
                                                                             </div>
-                                                                            <div class="ms-auto h1 pt-1 text-white">
+                                                                            <div class="ms-auto h1 pt-1 text-dark">
                                                                                     <i class="fas fa-temperature-high"></i>
                                                                             </div>
                                                                         </div>
@@ -372,41 +358,29 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                     </div>
                                              </div><br>
                                              <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="card tr" style="background-color: #152238;">
-                                                            <div class="card-content">
-                                                                <div class="card-body">
-                                                                <div class="media d-flex">
-                                                                    <div class="media-body text-left">
-                                                                            <h6 class="danger text-white">100°C</h6>
-                                                                            <span style="color:white;">Sensor 5</span>
-
-                                                                    </div>
-                                                                    <div class="ms-auto h1 pt-1 text-white">
-                                                                            <i class="fas fa-temperature-high"></i>
-                                                                    </div>
-                                                                </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                            <div class="card tr" style="background-color:#152238;">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <center>
+                                                            <div class="col-md-6">
+                                                                    <div class="card tr" style="background-color: white;">
                                                                     <div class="card-content">
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-white">10-07-22_21:51:41</h6>
-                                                                                    <span style="color:white;">Last Data on:</span>
+                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <span style="color:dark;">Sensor 5</span>
 
                                                                             </div>
-                                                                            <div class="ms-auto h1 pt-1 text-white">
-                                                                                    <i class="far fa-clock fa-spin"></i>
+                                                                            <div class="ms-auto h1 pt-1 text-dark">
+                                                                                    <i class="fas fa-temperature-high"></i>
                                                                             </div>
                                                                         </div>
                                                                         </div>
                                                                     </div>
+                                                                    </div>
                                                             </div>
+                                                            </center>
+                                                        </div>
                                                     </div>
                                              </div>
                                     <!-- </div>
@@ -418,125 +392,126 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                         </div> 
                     </div> 
                     </div> 
-                    <div class="row mt-2"><!---fault main row-->
-                        <div class="col-xl-12 col-sm-12 col-12 mt-3"><!----first half col 1-->                               
-                                <div class="card" style=""><!-- wave guide 1 card-->
-                                <div class="card-content"><!-- wg1 card content--->
-                                    <div class="card-body"><!--- wg1 card body--->
-                                            <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="card">
-                                                        <div class="card-content">
-                                                            <div class="card-body">
-                                                            <div class="media d-flex">
-                                                                <div class="media-body text-left">
-                                                                        <h3 class="danger" id="s2">0</h3>
-                                                                        <span style="color:#152238">Faults/Errors</span>
-                                                                </div>
-                                                                <div class="ms-auto h1 pt-2 text-warning">
-                                                                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    </div>  
-                                                    <div class="col-md-4">
-                                                        <div class="card">
-                                                        <div class="card-content">
-                                                            <div class="card-body">
-                                                            <div class="media d-flex">
-                                                                <div class="media-body text-left">
-                                                                        <h3 class="danger" id="s2">0</h3>
-                                                                        <span style="color:#152238">Faults/Errors</span>
-                                                                </div>
-                                                                <div class="ms-auto h1 pt-2 text-warning">
-                                                                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    </div> 
-                                                    <div class="col-md-4">
-                                                        <div class="card">
-                                                        <div class="card-content">
-                                                            <div class="card-body">
-                                                            <div class="media d-flex">
-                                                                <div class="media-body text-left">
-                                                                        <h3 class="danger" id="s2">0</h3>
-                                                                        <span style="color:#152238">Faults/Errors</span>
-                                                                </div>
-                                                                <div class="ms-auto h1 pt-2 text-warning">
-                                                                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    </div>           
-                                            </div>  
-                                    </div>
+                    <!-- <div class="row mt-3 mb-2">
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="chart" id="chart1"></div>
                                 </div>
-                                </div>  
+                            </div>
                         </div>
-                    </div> <!--mainrow-->
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="chart" id="chart2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
 
 
                                   
   </div>   
 </main>
-<script>
-const xValues = [100,200,300,400,500,600,700,800,900,1000];
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script>
+            $(document).ready(function(){  
+                var output_data = 0;
+                $.ajax({  
+                    url: 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m',  
+                    type: 'GET',  
+                    success: function(data) {  
+                        output_data = data.latitude;       
+                        var options = {
+                            series: [output_data],
+                            chart: {
+                                height: 200,
+                                type: 'radialBar',
+                                toolbar: {
+                                    show: true
+                                }
+                            },
+                            plotOptions: {
+                                radialBar: {
+                                    startAngle: -135,
+                                    endAngle: 225,
+                                    hollow: {
+                                        margin: 0,
+                                        size: '70%',
+                                        background: '#fff',
+                                        image: undefined,
+                                        imageOffsetX: 0,
+                                        imageOffsetY: 0,
+                                        position: 'front',
+                                        dropShadow: {
+                                            enabled: true,
+                                            top: 3,
+                                            left: 0,
+                                            blur: 4,
+                                            opacity: 0.24
+                                        }
+                                    },
+                                    track: {
+                                        background: '#fff',
+                                        strokeWidth: '67%',
+                                        margin: 0, // margin is in pixels
+                                        dropShadow: {
+                                            enabled: true,
+                                            top: -3,
+                                            left: 0,
+                                            blur: 4,
+                                            opacity: 0.35
+                                        }
+                                    },
+                                    dataLabels: {
+                                        show: true,
+                                        name: {
+                                            offsetY: -10,
+                                            show: true,
+                                            color: '#888',
+                                            fontSize: '15px'
+                                        },
+                                        value: {
+                                            formatter: function(val) {
+                                                return parseInt(val);
+                                            },
+                                            color: '#111',
+                                            fontSize: '36px',
+                                            show: true,
+                                        }
+                                    }
+                                }
+                            },
+                            fill: {
+                                type: 'gradient',
+                                gradient: {
+                                    shade: 'dark',
+                                    type: 'horizontal',
+                                    shadeIntensity: 0.5,
+                                    gradientToColors: ['#ABE5A1'],
+                                    inverseColors: true,
+                                    opacityFrom: 1,
+                                    opacityTo: 1,
+                                    stops: [0, 100]
+                                }
+                            },
+                            stroke: {
+                                lineCap: 'round'
+                            },
+                            labels: ['Max Temp'],
+                        };
+                        var chart = new ApexCharts(document.querySelector("#chart1"), options);
+                        chart.render();
+                        var chart1 = new ApexCharts(document.querySelector("#chart2"), options);
+                        chart1.render();
+                     
+                    }  
+                });  
+               
+            }); 
+        </script>
 
-new Chart("myChart", {
-  type: "line",
-  data: {
-    labels: xValues,
-    datasets: [{ 
-      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
-      borderColor: "red",
-      fill: false
-    }, { 
-      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
-      borderColor: "green",
-      fill: false
-    }, { 
-      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
-      borderColor: "blue",
-      fill: false
-    }]
-  },
-  options: {
-    legend: {display: false}
-  }
-});
-
-const xValuess = [100,200,300,400,500,600,700,800,900,1000];
-
-new Chart("myChartt", {
-  type: "line",
-  data: {
-    labels: xValuess,
-    datasets: [{ 
-      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
-      borderColor: "red",
-      fill: false
-    }, { 
-      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
-      borderColor: "green",
-      fill: false
-    }, { 
-      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
-      borderColor: "blue",
-      fill: false
-    }]
-  },
-  options: {
-    legend: {display: false}
-  }
-});
-</script>
 
 </body>
 </html>
