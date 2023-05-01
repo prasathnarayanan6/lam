@@ -10,9 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./lity/lity/dist/lity.js"></script>
-    <script src="./lity/lity/vendor/jquery.js"></script>
     <link rel="stylesheet" href="./lity/lity/dist/lity.css">
+    <script src="./lity/lity/vendor/jquery.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
@@ -211,7 +210,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                     <span class="" style="color:white;"><a href="#" class="text-white"><i class="fas fa-file" style="font-size:25px"></i></a></span>
                                             </div>
                                             <div class="col-md-4">
-                                                <span class="" style="color:white;"><a href="#" class="text-white"><i class="fas fa-chart-line fa-fw" style="font-size:25px"></i></a></span>
+                                                <span class="" style="color:white;"><a href="summa.php" class="text-white" data-lity data-lity-target="summa.php"><i class="fas fa-chart-line fa-fw" style="font-size:25px"></i></a></span>
                                             </div>
                                         </div>   
                                 </div>
@@ -403,7 +402,8 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
             </div><!--main row-->
             
   </div>   
-</main>
+</main> 
+        <script src="./lity/lity/dist/lity.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <script>

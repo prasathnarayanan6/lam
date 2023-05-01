@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/mm.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./lity/lity/dist/lity.css">
+    <script src="./lity/lity/vendor/jquery.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,7 +33,8 @@
 
 .tr {
   /* padding: 50px; */
-  transition: transform .2s; /* Animation */
+  transition: transform .2s;
+  color : black; /* Animation */
   /* width: 200px;
   height: 200px; */
   /* margin: 0 auto; */
@@ -164,61 +167,61 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                     <tbody>
                                                     <tr>
                                                         <th scope="row">1</th>
-                                                        <td>100</td>
+                                                        <td id="s1">NA</td>
                                                         <td>Normal</td>
                                                         <td>view</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">2</th>
-                                                        <td>102</td>
+                                                        <td id="s2">NA</td>
                                                         <td>Normal</td>
                                                         <td>view</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">3</th>
-                                                        <td>103</td>
+                                                        <td id="s3">NA</td>
                                                         <td>Normal</td>
                                                         <td>view</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">4</th>
-                                                        <td>104</td>
+                                                        <td id="s4">NA</td>
                                                         <td>Normal</td>
                                                         <td>view</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">5</th>
-                                                        <td>105</td>
+                                                        <td id="s5">NA</td>
                                                         <td>Normal</td>
                                                         <td>view</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">6</th>
-                                                        <td>106</td>
+                                                        <td id="s6">NA</td>
                                                         <td>Normal</td>
                                                         <td>view</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">7</th>
-                                                        <td>107</td>
+                                                        <td id="s7">NA</td>
                                                         <td>Normal</td>
                                                         <td>view</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">8</th>
-                                                        <td>108</td>
+                                                        <td id="s8">NA</td>
                                                         <td>Normal</td>
                                                         <td>view</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">9</th>
-                                                        <td>108</td>
+                                                        <td id="s9">NA</td>
                                                         <td>Normal</td>
                                                         <td>view</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">10</th>
-                                                        <td>108</td>
+                                                        <td id="s10">NA</td>
                                                         <td>Normal</td>
                                                         <td>view</td>
                                                     </tr>
@@ -257,17 +260,17 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                             <div class="card tr" style=""><!-- wave guide 1 card-->
                                                                 <div class="card-content"><!-- wg1 card content--->
                                                                     <div class="card-body">
-                                                                        <center><i class="fas fa-file" style="font-size:40px"></i><br><br></center>
+                                                                        <center><a href="pdf" class="" style=""><i class="fas fa-file tr" style="font-size:40px"></i></a><br><br></center>
                                                                         <center><h6>Reports</h6></center>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <div class="card tr" style=""><!-- wave guide 1 card-->
+                                                            <div class="card" style=""><!-- wave guide 1 card-->
                                                                 <div class="card-content"><!-- wg1 card content--->
                                                                     <div class="card-body">
-                                                                        <center><i class="fas fa-chart-line fa-fw" style="font-size:40px"></i><br><br></center>
+                                                                        <center><a href="summa.php?id=xy1waveguide&&s1=s1&&s2=s2&&s3=s3&&s4=s4&&s5=s5" class="text-dark" data-lity data-lity-target="summa.php?id=xy1waveguide&&s1=s1&&s2=s2&&s3=s3&&s4=s4&&s5=s5"><i class="fas fa-chart-line fa-fw" style="font-size:40px"></i></a><br><br></center>
                                                                         <center><h6>Graph</h6></center>
                                                                     </div>
                                                                 </div>
@@ -305,17 +308,17 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                             <div class="card tr" style=""><!-- wave guide 1 card-->
                                                                 <div class="card-content"><!-- wg1 card content--->
                                                                     <div class="card-body">
-                                                                        <center><i class="fas fa-file" style="font-size:40px"></i><br><br></center>
+                                                                        <center><a href="pdf2" class="" style=""><i class="fas fa-file tr" style="font-size:40px"></i></a><br><br></center>
                                                                         <center><h6>Reports</h6></center>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <div class="card tr" style=""><!-- wave guide 1 card-->
+                                                            <div class="card" style=""><!-- wave guide 1 card-->
                                                                 <div class="card-content"><!-- wg1 card content--->
                                                                     <div class="card-body">
-                                                                        <center><i class="fas fa-chart-line fa-fw" style="font-size:40px"></i><br><br></center>
+                                                                        <center><a href="summa.php?id=xy2waveguide&&s6=s6&&s7=s7&&s8=s8&&s9=s9&&s10=s10" class="text-dark" data-lity data-lity-target="summa.php?id=xy2waveguide&&s6=s6&&s7=s7&&s8=s8&&s9=s9&&s10=s10"><i class="fas fa-chart-line fa-fw" style="font-size:40px"></i></a><br><br></center>
                                                                         <center><h6>Graph</h6></center>
                                                                     </div>
                                                                 </div>
@@ -332,105 +335,41 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
             </div>                     
   </div>   
 </main>
+        <script src="./lity/lity/dist/lity.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <script>
-            $(document).ready(function(){  
-                var output_data = 0;
-                $.ajax({  
-                    url: 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m',  
-                    type: 'GET',  
-                    success: function(data) {  
-                        output_data = data.latitude;       
-                        var options = {
-                            series: [output_data],
-                            chart: {
-                                height: 200,
-                                type: 'radialBar',
-                                toolbar: {
-                                    show: true
-                                }
-                            },
-                            plotOptions: {
-                                radialBar: {
-                                    startAngle: -135,
-                                    endAngle: 225,
-                                    hollow: {
-                                        margin: 0,
-                                        size: '70%',
-                                        background: '#fff',
-                                        image: undefined,
-                                        imageOffsetX: 0,
-                                        imageOffsetY: 0,
-                                        position: 'front',
-                                        dropShadow: {
-                                            enabled: true,
-                                            top: 3,
-                                            left: 0,
-                                            blur: 4,
-                                            opacity: 0.24
-                                        }
-                                    },
-                                    track: {
-                                        background: '#fff',
-                                        strokeWidth: '67%',
-                                        margin: 0, // margin is in pixels
-                                        dropShadow: {
-                                            enabled: true,
-                                            top: -3,
-                                            left: 0,
-                                            blur: 4,
-                                            opacity: 0.35
-                                        }
-                                    },
-                                    dataLabels: {
-                                        show: true,
-                                        name: {
-                                            offsetY: -10,
-                                            show: true,
-                                            color: '#888',
-                                            fontSize: '15px'
-                                        },
-                                        value: {
-                                            formatter: function(val) {
-                                                return parseInt(val);
-                                            },
-                                            color: '#111',
-                                            fontSize: '36px',
-                                            show: true,
-                                        }
-                                    }
-                                }
-                            },
-                            fill: {
-                                type: 'gradient',
-                                gradient: {
-                                    shade: 'dark',
-                                    type: 'horizontal',
-                                    shadeIntensity: 0.5,
-                                    gradientToColors: ['#ABE5A1'],
-                                    inverseColors: true,
-                                    opacityFrom: 1,
-                                    opacityTo: 1,
-                                    stops: [0, 100]
-                                }
-                            },
-                            stroke: {
-                                lineCap: 'round'
-                            },
-                            labels: ['Max Temp'],
-                        };
-                        var chart = new ApexCharts(document.querySelector("#chart1"), options);
-                        chart.render();
-                        var chart1 = new ApexCharts(document.querySelector("#chart2"), options);
-                        chart1.render();
-                     
-                    }  
-                });  
-               
-            }); 
-        </script>
-
-
+        function startLiveUpdate(){
+            const textViewCount1 = document.getElementById('s1');
+            const textViewCount2 = document.getElementById('s2');
+            const textViewCount3 = document.getElementById('s3');
+            const textViewCount4 = document.getElementById('s4');
+            const textViewCount5 = document.getElementById('s5');
+            const textViewCount6 = document.getElementById('s6');
+            const textViewCount7 = document.getElementById('s7');
+            const textViewCount8 = document.getElementById('s8');
+            const textViewCount9 = document.getElementById('s9');
+            const textViewCount10 = document.getElementById('s10');
+            setInterval(function() {
+               fetch('http://localhost/lam/data').then(function(response){
+                  return response.json();
+               }).then(function(data){
+                  textViewCount1.textContent = data.s1;
+                  textViewCount2.textContent = data.s2;
+                  textViewCount3.textContent = data.s3;
+                  textViewCount4.textContent = data.s4;
+                  textViewCount5.textContent = data.s5;
+                  textViewCount6.textContent = data.s6;
+                  textViewCount7.textContent = data.s7;
+                  textViewCount8.textContent = data.s8;
+                  textViewCount9.textContent = data.s9;
+                  textViewCount10.textContent = data.s10;
+                })
+            }, 1000);
+         }
+         
+         document.addEventListener('DOMContentLoaded', function (){
+            startLiveUpdate();
+         });
+         </script>
 </body>
 </html>

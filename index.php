@@ -1,3 +1,6 @@
+<?php
+require_once "conn.php"; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,3 +78,57 @@
 </center>   
 </body>
 </html>
+<?php 
+// $email = $_POST['email'];
+// $password = $_POST['password'];
+if(isset($_POST['login'])){
+    $email = $_POST['email'] ; 
+    $password = $_POST['password'];
+    $sanitized_userid = mysqli_real_escape_string($conn, $email);
+    $sanitized_password = mysqli_real_escape_string($conn, $password);
+    // echo $sanitized_password;
+        $password = 'pras.nara';
+        $method = 'aes-256-cbc';
+        $key = substr(hash('sha256', $password, true), 0, 32);
+        // echo "Password:" . $password . "\n";
+        $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0);
+        $encrypted = base64_encode(openssl_encrypt($sanitized_password, $method, $key, OPENSSL_RAW_DATA, $iv));
+        // My secret message 1234
+        $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $key, OPENSSL_RAW_DATA, $iv);
+        // echo 'plaintext=' . $plaintext . "\n";
+        // echo 'cipher=' . $method . "\n";
+        // echo 'encrypted to: ' . $encrypted . "\n";
+        // echo 'decrypted to: ' . $decrypted . "\n\n";
+        function generateRandomString($length = 30) {
+              $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+              $charactersLength = strlen($characters);
+              $randomString = '';
+              for ($i = 0; $i < $length; $i++) {
+                  $randomString .= $characters[rand(0, $charactersLength - 1)];
+              }
+              return $randomString;
+        }
+        $identityid =   generateRandomString();
+        $sql = "SELECT * FROM logincred WHERE email = '" . $sanitized_userid . "' AND password = '" . $encrypted . "'";
+        $result = mysqli_query($conn, $sql);
+        // or die(mysqli_error($db));
+        $num=mysqli_fetch_array($result);
+        if($num > 0) {
+          session_start();
+          $_SESSION['email'] = $sanitized_userid;
+          $_SESSION['password'] = $sanitized_password;
+          // echo "Login Success";
+          $_SESSION['identity'] = $identityid;
+          echo $_SESSION['identity'];
+
+          date_default_timezone_set('Asia/Kolkata');
+          $date = date("Y-m-d_h:i:sa");
+          header("Location: dashboard.php?identity={$identityid}");
+          $sql1 = "INSERT INTO loginact(email, hash, date) VALUES('$email', '$identityid', '$date')";
+          $conn->query($sql1);
+        }
+        else {
+          echo "Wrong User id or password";
+        } 
+}
+?>

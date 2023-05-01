@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -134,7 +137,8 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">Dashboard</a>
                             <div class="d-flex ms-auto">
-                                Prasath
+                               <?php 
+                               echo $_SESSION['email']; ?> 
                             </div>
                     </div>
             </nav>
@@ -143,6 +147,18 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                     // $result = mysqli_query($conn, $sql);      
                     // $num = mysqli_fetch_array($result); 
             ?>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4">
+                                <div class="text-warning" id="fault"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 0 Faults</div>
+                        </div>
+                        <div class="col-md-5">
+                                <div class="text-success" id="active"><i class='fas fa-eye'></i> 10 Active Sensors</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row"><!---row 1----------->
                 <div class="col-md-6" style=""><!----first half---->
                     <div class="row"><!----first half row 1--->
@@ -156,7 +172,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                         <h6 class="danger text-white">WaveGuide: xy1waveguide</h6>
                                                 </div>
                                                 <div class="ms-auto h1 pt-2">
-                                                    <h6 class="text-danger" id="text">(Offline)</h6>
+                                                    <h6 class="text-white" id="blink-text1">(Online)</h6>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -166,7 +182,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                 <div class="card-body">
                                                                 <div class="media d-flex">
                                                                     <div class="media-body text-left">
-                                                                            <h6 class="danger text-dark">100°C</h6>
+                                                                            <h6 class="danger text-dark"><span id="s1">NA</span>°C</h6>
                                                                             <span style="color:dark;">Sensor 1</span>
 
                                                                     </div>
@@ -184,7 +200,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <h6 class="danger text-dark"><span id="s2">NA</span>°C</h6>
                                                                                     <span style="color:dark;">Sensor 2</span>
 
                                                                             </div>
@@ -204,7 +220,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                 <div class="card-body">
                                                                 <div class="media d-flex">
                                                                     <div class="media-body text-left">
-                                                                            <h6 class="danger text-dark">100°C</h6>
+                                                                            <h6 class="danger text-dark"><span id="s3">NA</span>°C</h6>
                                                                             <span style="color:dark;">Sensor 3</span>
 
                                                                     </div>
@@ -222,7 +238,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <h6 class="danger text-dark"><span id="s4">NA</span>°C</h6>
                                                                                     <span style="color:dark;">Sensor 4</span>
                                                                             </div>
                                                                             <div class="ms-auto h1 pt-1 text-dark">
@@ -244,7 +260,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <h6 class="danger text-dark"><span id="s5">NA</span>°C</h6>
                                                                                     <span style="color:dark;">Sensor 5</span>
                                                                             </div>
                                                                             <div class="ms-auto h1 pt-1 text-dark">
@@ -278,7 +294,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                         <h6 class="danger text-dark">WaveGuide: xy2waveguide</h6>
                                                 </div>
                                                 <div class="ms-auto h1 pt-2">
-                                                    <h6 class="text-success" id="text">(Online)</h6>
+                                                    <h6 class="text-white" id="blink-text">(Online)</h6>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -288,7 +304,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                 <div class="card-body">
                                                                 <div class="media d-flex">
                                                                     <div class="media-body text-left">
-                                                                            <h6 class="danger text-dark">100°C</h6>
+                                                                            <h6 class="danger text-dark"><span id="s6">NA</span>°C</h6>
                                                                             <span style="color:black;">Sensor 1</span>
 
                                                                     </div>
@@ -306,7 +322,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <h6 class="danger text-dark"><span id="s7">NA</span>°C</h6>
                                                                                     <span style="color:dark;">Sensor 2</span>
 
                                                                             </div>
@@ -326,7 +342,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                 <div class="card-body">
                                                                 <div class="media d-flex">
                                                                     <div class="media-body text-left">
-                                                                            <h6 class="danger text-dark">100°C</h6>
+                                                                            <h6 class="danger text-dark"><span id="s8">NA</span>°C</h6>
                                                                             <span style="color:dark;">Sensor 3</span>
 
                                                                     </div>
@@ -344,7 +360,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <h6 class="danger text-dark"><span id="s9">NA</span>°C</h6>
                                                                                     <span style="color:dark;">Sensor 4</span>
 
                                                                             </div>
@@ -367,7 +383,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                         <div class="card-body">
                                                                         <div class="media d-flex">
                                                                             <div class="media-body text-left">
-                                                                                    <h6 class="danger text-dark">100°C</h6>
+                                                                                    <h6 class="danger text-dark"><span id="s10">NA</span>°C</h6>
                                                                                     <span style="color:dark;">Sensor 5</span>
 
                                                                             </div>
@@ -391,23 +407,27 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                             </div> 
                         </div> 
                     </div> 
-                    </div> 
-                    <!-- <div class="row mt-3 mb-2">
-                        <div class="col-6">
+                    </div>   
+                <div class="row mt-3 mb-2">
+                        <div class="col-sm-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="chart" id="chart1"></div>
+                                    <div class="chart-container">
+                                       <center> <canvas id="myChart" style="width:100%;max-width:600px;max-height:400px"></canvas></center>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <!-- <div class="col-sm-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="chart" id="chart2"></div>
+                                    <div class="chart-container">
+                                       <center> <canvas id="myChart2" style="width:100%;max-width:600px;max-height:400px"></canvas></center>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div> -->
+                        </div> -->
+                </div> 
 
 
                                   
@@ -415,101 +435,313 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
-            $(document).ready(function(){  
-                var output_data = 0;
-                $.ajax({  
-                    url: 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m',  
-                    type: 'GET',  
-                    success: function(data) {  
-                        output_data = data.latitude;       
-                        var options = {
-                            series: [output_data],
-                            chart: {
-                                height: 200,
-                                type: 'radialBar',
-                                toolbar: {
-                                    show: true
-                                }
+            var element = document.getElementById("blink-text");
+            var interval = setInterval(function() {
+            element.style.visibility = (element.style.visibility == 'hidden' ? '' : 'hidden');
+            }, 800);
+
+            var element1 = document.getElementById("blink-text1");
+            var interval1 = setInterval(function() {
+            element1.style.visibility = (element1.style.visibility == 'hidden' ? '' : 'hidden');
+            }, 800);
+
+            var element2 = document.getElementById("fault");
+            var interval2 = setInterval(function() {
+            element2.style.visibility = (element2.style.visibility == 'hidden' ? '' : 'hidden');
+            }, 1000);
+
+            var element3 = document.getElementById("active");
+            var interval3 = setInterval(function() {
+            element3.style.visibility = (element3.style.visibility == 'hidden' ? '' : 'hidden');
+            }, 1000);
+            
+            const ctx = document.getElementById('myChart');
+const url = "http://localhost/lam/data";
+let s1 = [];
+let s2 = [];
+let s3 = [];
+let s4 = [];
+let s5 = [];
+let s6 = [];
+let s7 = [];
+let s8 = [];
+let s9 = [];
+let s10 = [];
+let date = [];
+let mychart;
+
+async function getchartdata() {
+  const response = await fetch(url);
+  const data = await response.json();
+  
+  // Push new data to arrays
+  s1.push(data.s1);
+  s2.push(data.s2);
+  s3.push(data.s3);
+  s4.push(data.s4);
+  s5.push(data.s5);
+  s6.push(data.s6);
+  s7.push(data.s7);
+  s8.push(data.s8);
+  s9.push(data.s9);
+  s10.push(data.s10);
+  date.push(data.date);
+
+  if (mychart) {
+    mychart.data.labels = date;
+    mychart.data.datasets[0].data = s1;
+    mychart.data.datasets[1].data = s2;
+    mychart.data.datasets[2].data = s3;
+    mychart.data.datasets[3].data = s4;
+    mychart.data.datasets[4].data = s5;
+    mychart.data.datasets[5].data = s6;
+    mychart.data.datasets[6].data = s7;
+    mychart.data.datasets[7].data = s8;
+    mychart.data.datasets[8].data = s9;
+    mychart.data.datasets[9].data = s10;
+    mychart.update();
+  } else {
+    mychart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: date,
+        datasets: [
+          {
+            label: 'sensor1',
+            data: s1,
+            borderWidth: 1
+          },
+          {
+            label: 'sensor2',
+            data: s2,
+            borderWidth: 1
+          },{
+            label: 'sensor3',
+            data: s3,
+            borderWidth: 1
+          },{
+            label: 'sensor4',
+            data: s4,
+            borderWidth: 1
+          },{
+            label: 'sensor5',
+            data: s5,
+            borderWidth: 1
+          },{
+            label: 'sensor6',
+            data: s6,
+            borderWidth: 1
+          },{
+            label: 'sensor7',
+            data: s7,
+            borderWidth: 1
+          },{
+            label: 'sensor8',
+            data: s8,
+            borderWidth: 1
+          },{
+            label: 'sensor9',
+            data: s9,
+            borderWidth: 1
+          },{
+            label: 'sensor10',
+            data: s10,
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {}
+    });
+  }
+}
+
+setTimeout(getchartdata, 0);
+setInterval(getchartdata, 10000);
+
+           // const ctx = document.getElementById('myChart');
+            //const url = "http://localhost/lam/data";
+            //start getchartdata
+            // async function getchartdata(){
+            //    const s1 =[];
+            //    const s2 =[];
+            //    const s3 =[];
+            //    const s4 =[];
+            //    const s5 =[];
+            //    const s6 =[];
+            //    const s7 =[];
+            //    const s8 =[];
+            //    const s9 =[];
+            //    const s10 =[];
+            //    const date = [];
+            //     const response = await fetch(url);
+            //     const data = await response.json();
+            //     date.push(data.date);
+            //     // for (let index = 0; index < data.length; index++) {
+            //     //     s1[index] = data.s1;
+            //     //     s2[index] = data.s2;
+            //     //     s3[index] = data.s3;
+            //     //     date[index] = data.date;
+            //     // }
+            //     // console.log(s1);
+            //     if (mychart) {
+            //         mychart.data.labels.push(data.date);
+            //          mychart.data.datasets[0].data.push(data.s1);
+            //          mychart.data.datasets[1].data.push(data.s2);
+            //          mychart.data.datasets[2].data.push(data.s3);
+            //          mychart.data.datasets[3].data.push(data.s4);
+            //          mychart.data.datasets[4].data.push(data.s5);
+            //          mychart.data.datasets[5].data.push(data.s6);
+            //          mychart.data.datasets[6].data.push(data.s7);
+            //          mychart.data.datasets[7].data.push(data.s8);
+            //          mychart.data.datasets[8].data.push(data.s9);
+            //          mychart.data.datasets[9].data.push(data.s10);
+            //          mychart.update(); 
+            //     }else{
+            //             mychart = new Chart(ctx, {
+            //             type: 'polarArea',
+            //             data: {
+            //                 labels: date,
+            //                 datasets: [
+            //                     {
+            //                     label: 'sensor1',
+            //                     data: s1,
+            //                     borderWidth: 1
+            //                 },
+            //             {
+            //                 label: 'sensor2',
+            //                 data: s2,
+            //                 borderWidth: 1
+            //             },{
+            //                 label: 'sensor3',
+            //                 data: s3,
+            //                 borderWidth: 1
+            //             },{
+            //                 label: 'sensor4',
+            //                 data: s4,
+            //                 borderWidth: 1
+            //             },{
+            //                 label: 'sensor5',
+            //                 data: s5,
+            //                 borderWidth: 1
+            //             },{
+            //                 label: 'sensor6',
+            //                 data: s6,
+            //                 borderWidth: 1
+            //             },{
+            //                 label: 'sensor7',
+            //                 data: s7,
+            //                 borderWidth: 1
+            //             },{
+            //                 label: 'sensor8',
+            //                 data: s8,
+            //                 borderWidth: 1
+            //             },{
+            //                 label: 'sensor9',
+            //                 data: s9,
+            //                 borderWidth: 1
+            //             },{
+            //                 label: 'sensor10',
+            //                 data: s10,
+            //                 borderWidth: 1
+            //             }
+            //         ]
+            //             },
+            //             options: { }
+            //         });
+            //     }
+            // }
+            // let mychart;
+            // setInterval(getchartdata, 2500);
+
+
+            //sensor - 2
+            const ctx1 = document.getElementById('myChart2');
+            // const url = "http://localhost/lam/data";
+            //start getchartdata
+            async function getchartdata1(){
+               const s1 =[];
+               const s2 =[];
+               const s3 =[];
+               const date = [];
+                const response = await fetch(url);
+                const data = await response.json();
+                date.push(data.date);
+                // for (let index = 0; index < data.length; index++) {
+                //     s1[index] = data.s1;
+                //     s2[index] = data.s2;
+                //     s3[index] = data.s3;
+                //     date[index] = data.date;
+                // }
+                // console.log(s1);
+                if (mychart2) {
+                    mychart2.data.labels.push(data.date);
+                     mychart2.data.datasets[0].data.push(data.s1);
+                     mychart2.data.datasets[1].data.push(data.s2);
+                     mychart2.data.datasets[2].data.push(data.s3);
+                     mychart2.update(); 
+                }else{
+                        mychart2 = new Chart(ctx1, {
+                        type: 'bar',
+                        data: {
+                            labels: date,
+                            datasets: [
+                                {
+                                label: 'sensor1',
+                                data: s1,
+                                borderWidth: 1
                             },
-                            plotOptions: {
-                                radialBar: {
-                                    startAngle: -135,
-                                    endAngle: 225,
-                                    hollow: {
-                                        margin: 0,
-                                        size: '70%',
-                                        background: '#fff',
-                                        image: undefined,
-                                        imageOffsetX: 0,
-                                        imageOffsetY: 0,
-                                        position: 'front',
-                                        dropShadow: {
-                                            enabled: true,
-                                            top: 3,
-                                            left: 0,
-                                            blur: 4,
-                                            opacity: 0.24
-                                        }
-                                    },
-                                    track: {
-                                        background: '#fff',
-                                        strokeWidth: '67%',
-                                        margin: 0, // margin is in pixels
-                                        dropShadow: {
-                                            enabled: true,
-                                            top: -3,
-                                            left: 0,
-                                            blur: 4,
-                                            opacity: 0.35
-                                        }
-                                    },
-                                    dataLabels: {
-                                        show: true,
-                                        name: {
-                                            offsetY: -10,
-                                            show: true,
-                                            color: '#888',
-                                            fontSize: '15px'
-                                        },
-                                        value: {
-                                            formatter: function(val) {
-                                                return parseInt(val);
-                                            },
-                                            color: '#111',
-                                            fontSize: '36px',
-                                            show: true,
-                                        }
-                                    }
-                                }
-                            },
-                            fill: {
-                                type: 'gradient',
-                                gradient: {
-                                    shade: 'dark',
-                                    type: 'horizontal',
-                                    shadeIntensity: 0.5,
-                                    gradientToColors: ['#ABE5A1'],
-                                    inverseColors: true,
-                                    opacityFrom: 1,
-                                    opacityTo: 1,
-                                    stops: [0, 100]
-                                }
-                            },
-                            stroke: {
-                                lineCap: 'round'
-                            },
-                            labels: ['Max Temp'],
-                        };
-                        var chart = new ApexCharts(document.querySelector("#chart1"), options);
-                        chart.render();
-                        var chart1 = new ApexCharts(document.querySelector("#chart2"), options);
-                        chart1.render();
-                     
-                    }  
-                });  
-               
-            }); 
+                        {
+                            label: 'sensor2',
+                            data: s2,
+                            borderWidth: 1
+                        },{
+                            label: 'sensor3',
+                            data: s3,
+                            borderWidth: 1
+                        }
+                    ]
+                        },
+                        options: { }
+                    });
+                }
+            }
+            let mychart2;
+            setInterval(getchartdata1,5000);
+
+            function startLiveUpdate(){
+            const textViewCount1 = document.getElementById('s1');
+            const textViewCount2 = document.getElementById('s2');
+            const textViewCount3 = document.getElementById('s3');
+            const textViewCount4 = document.getElementById('s4');
+            const textViewCount5 = document.getElementById('s5');
+            const textViewCount6 = document.getElementById('s6');
+            const textViewCount7 = document.getElementById('s7');
+            const textViewCount8 = document.getElementById('s8');
+            const textViewCount9 = document.getElementById('s9');
+            const textViewCount10 = document.getElementById('s10');
+            setInterval(function() {
+               fetch(url).then(function(response){
+                  return response.json();
+               }).then(function(data){
+                  textViewCount1.textContent = data.s1;
+                  textViewCount2.textContent = data.s2;
+                  textViewCount3.textContent = data.s3;
+                  textViewCount4.textContent = data.s4;
+                  textViewCount5.textContent = data.s5;
+                  textViewCount6.textContent = data.s6;
+                  textViewCount7.textContent = data.s7;
+                  textViewCount8.textContent = data.s8;
+                  textViewCount9.textContent = data.s9;
+                  textViewCount10.textContent = data.s10;
+                })
+            }, 1000);
+         }
+         
+         document.addEventListener('DOMContentLoaded', function (){
+            startLiveUpdate();
+         });
         </script>
 
 
