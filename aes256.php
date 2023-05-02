@@ -1,18 +1,23 @@
 <?php
-// function my_encrypt($data, $key) {
-    // Remove the base64 encoding from our key
-    $data = 'Karthi@65';
-    $key = 'bRuD5WYw5wd0rdHR9yLlM6wt2vteuiniQBqE70nAuhU=';
-    $encryption_key = base64_decode($key);
-    // Generate an initialization vector
-    $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('aes-256-cbc'));
-    // Encrypt the data using AES 256 encryption in CBC mode using our encryption key and initialization vector.
-    $encrypted = openssl_encrypt($data, 'aes-256-cbc', $encryption_key, 0, $iv);
-    // The $iv is just as important as the key for decrypting, so save it with our encrypted data using a unique separator (::)
-    echo base64_encode($encrypted . '::' . $iv);
-//}
-$encryption_key = base64_decode($key);
-// To decrypt, split the encrypted data from our IV - our unique separator used was "::"
-    // list($encrypted_data, $iv) = explode('::', base64_decode($data), 2);
-    echo openssl_decrypt($encrypted_data, 'aes-256-cbc', $encryption_key, 0, $iv);
+$plaintext = 'pras2803';
+$password = 'Gte5RVXvuYOAW5DwzMs4DfzpC49WlU4';
+$method = 'aes-256-cbc';
+
+// Must be exact 32 chars (256 bit)
+$password = substr(hash('sha256', $password, true), 0, 32);
+// echo "Password:" . $password . "\n";
+
+// IV must be exact 16 chars (128 bit)
+$iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0);
+
+// av3DYGLkwBsErphcyYp+imUW4QKs19hUnFyyYcXwURU=
+$encrypted = base64_encode(openssl_encrypt($plaintext, $method, $password, OPENSSL_RAW_DATA, $iv));
+
+// My secret message 1234
+$decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPENSSL_RAW_DATA, $iv);
+
+// echo 'plaintext=' . $plaintext . "\n";
+// echo 'cipher=' . $method . "\n";
+echo 'encrypted to: ' . $encrypted . "\n";
+echo 'decrypted to: ' . $decrypted . "\n\n";
 ?>

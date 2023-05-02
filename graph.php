@@ -99,6 +99,12 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 .line {
   border-top: 1px solid black;
 }
+.fixed-logout {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.6;
+}
     </style>
 
 </head>
@@ -400,8 +406,11 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                     </div><!--inner row-->
                 </div><!--col md 6-->
             </div><!--main row-->
-            
+            <div class="fixed-logout ml-auto">
+                    <a href="logout.php" class="btn btn-danger"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            </div>    
   </div>   
+  
 </main> 
         <script src="./lity/lity/dist/lity.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

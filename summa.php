@@ -40,9 +40,10 @@ elseif($id=="xy2waveguide")
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row mt-5">
+        <div class="row mt-3">
             <div class="col-md-12">
-               <center><h4>Sensor Graph: <?php echo $id;?>(Live Graph)</h4></center><br><br>
+               <center><h5>Sensor Graph: <?php echo $id;?>(Live Graph)</h5></center><br>
+               <center><h5>Temperature v Time</h5></center><br>
                 <center><canvas id="myChart" style="width:100%;max-width:600px;max-height:400px"></canvas></center>
             </div>
         </div>
@@ -52,7 +53,7 @@ elseif($id=="xy2waveguide")
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
      const ctx = document.getElementById('myChart');
-     const url = "http://localhost/lam/data";
+     const url = "https://da5b-171-78-190-223.ngrok-free.app/lam/data.php";
     <?php 
     if($id=="xy1waveguide")
     {

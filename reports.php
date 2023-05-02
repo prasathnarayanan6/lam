@@ -97,6 +97,12 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     }
   /* CSS that should be displayed if width is equal to or less than 800px goes here */
 }
+.fixed-logout {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  opacity: 0.6;
+}
     </style>
 
 </head>
@@ -328,11 +334,12 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                             </div>
                                         </div>
                                         </div>
-                                </div>  
-                                
-                                
+                                </div>          
                         </div>
-            </div>                     
+            </div> 
+            <div class="fixed-logout ml-auto">
+                    <a href="logout.php" class="btn btn-danger"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            </div>   
   </div>   
 </main>
         <script src="./lity/lity/dist/lity.js"></script>
@@ -350,7 +357,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
             const textViewCount9 = document.getElementById('s9');
             const textViewCount10 = document.getElementById('s10');
             setInterval(function() {
-               fetch('http://localhost/lam/data').then(function(response){
+               fetch('https://da5b-171-78-190-223.ngrok-free.app/lam/data.php').then(function(response){
                   return response.json();
                }).then(function(data){
                   textViewCount1.textContent = data.s1;

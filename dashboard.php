@@ -1,5 +1,16 @@
 <?php 
+
 session_start();
+if(!isset($_SESSION['identity']) && !isset($_SESSION['email'])){
+    header('location:index');
+	  die();
+}	
+// $id = $_GET['identity'];
+// $ses = $_SESSION['identity'];
+// if($id!=$ses){
+//     header('location:index');
+//     die(); 
+// } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -97,6 +108,13 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     }
   /* CSS that should be displayed if width is equal to or less than 800px goes here */
 }
+.fixed-logout {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  opacity: 0.6;
+}
+
     </style>
 
 </head>
@@ -291,7 +309,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                     <div class="card-body"><!--- wg1 card body--->
                                             <div class="media d-flex">
                                                 <div class="media-body text-left">
-                                                        <h6 class="danger text-dark">WaveGuide: xy2waveguide</h6>
+                                                        <h6 class="danger text-white">WaveGuide: xy2waveguide</h6>
                                                 </div>
                                                 <div class="ms-auto h1 pt-2">
                                                     <h6 class="text-white" id="blink-text">(Online)</h6>
@@ -427,14 +445,16 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                 </div>
                             </div>
                         </div> -->
-                </div> 
-
-
-                                  
-  </div>   
+                </div>
+                <!-- <a href="logout.php" class="float"><img src="./img/logout.png" class="img-fluid" alt="logout"></a>  -->
+                <div class="fixed-logout ml-auto">
+                    <a href="logout.php" class="btn btn-danger"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                </div>                         
+  </div>  
+ 
 </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
             var element = document.getElementById("blink-text");
@@ -458,7 +478,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
             }, 1000);
             
             const ctx = document.getElementById('myChart');
-const url = "http://localhost/lam/data";
+const url = "https://da5b-171-78-190-223.ngrok-free.app/lam/data.php";
 let s1 = [];
 let s2 = [];
 let s3 = [];
@@ -559,156 +579,6 @@ async function getchartdata() {
 
 setTimeout(getchartdata, 0);
 setInterval(getchartdata, 10000);
-
-           // const ctx = document.getElementById('myChart');
-            //const url = "http://localhost/lam/data";
-            //start getchartdata
-            // async function getchartdata(){
-            //    const s1 =[];
-            //    const s2 =[];
-            //    const s3 =[];
-            //    const s4 =[];
-            //    const s5 =[];
-            //    const s6 =[];
-            //    const s7 =[];
-            //    const s8 =[];
-            //    const s9 =[];
-            //    const s10 =[];
-            //    const date = [];
-            //     const response = await fetch(url);
-            //     const data = await response.json();
-            //     date.push(data.date);
-            //     // for (let index = 0; index < data.length; index++) {
-            //     //     s1[index] = data.s1;
-            //     //     s2[index] = data.s2;
-            //     //     s3[index] = data.s3;
-            //     //     date[index] = data.date;
-            //     // }
-            //     // console.log(s1);
-            //     if (mychart) {
-            //         mychart.data.labels.push(data.date);
-            //          mychart.data.datasets[0].data.push(data.s1);
-            //          mychart.data.datasets[1].data.push(data.s2);
-            //          mychart.data.datasets[2].data.push(data.s3);
-            //          mychart.data.datasets[3].data.push(data.s4);
-            //          mychart.data.datasets[4].data.push(data.s5);
-            //          mychart.data.datasets[5].data.push(data.s6);
-            //          mychart.data.datasets[6].data.push(data.s7);
-            //          mychart.data.datasets[7].data.push(data.s8);
-            //          mychart.data.datasets[8].data.push(data.s9);
-            //          mychart.data.datasets[9].data.push(data.s10);
-            //          mychart.update(); 
-            //     }else{
-            //             mychart = new Chart(ctx, {
-            //             type: 'polarArea',
-            //             data: {
-            //                 labels: date,
-            //                 datasets: [
-            //                     {
-            //                     label: 'sensor1',
-            //                     data: s1,
-            //                     borderWidth: 1
-            //                 },
-            //             {
-            //                 label: 'sensor2',
-            //                 data: s2,
-            //                 borderWidth: 1
-            //             },{
-            //                 label: 'sensor3',
-            //                 data: s3,
-            //                 borderWidth: 1
-            //             },{
-            //                 label: 'sensor4',
-            //                 data: s4,
-            //                 borderWidth: 1
-            //             },{
-            //                 label: 'sensor5',
-            //                 data: s5,
-            //                 borderWidth: 1
-            //             },{
-            //                 label: 'sensor6',
-            //                 data: s6,
-            //                 borderWidth: 1
-            //             },{
-            //                 label: 'sensor7',
-            //                 data: s7,
-            //                 borderWidth: 1
-            //             },{
-            //                 label: 'sensor8',
-            //                 data: s8,
-            //                 borderWidth: 1
-            //             },{
-            //                 label: 'sensor9',
-            //                 data: s9,
-            //                 borderWidth: 1
-            //             },{
-            //                 label: 'sensor10',
-            //                 data: s10,
-            //                 borderWidth: 1
-            //             }
-            //         ]
-            //             },
-            //             options: { }
-            //         });
-            //     }
-            // }
-            // let mychart;
-            // setInterval(getchartdata, 2500);
-
-
-            //sensor - 2
-            const ctx1 = document.getElementById('myChart2');
-            // const url = "http://localhost/lam/data";
-            //start getchartdata
-            async function getchartdata1(){
-               const s1 =[];
-               const s2 =[];
-               const s3 =[];
-               const date = [];
-                const response = await fetch(url);
-                const data = await response.json();
-                date.push(data.date);
-                // for (let index = 0; index < data.length; index++) {
-                //     s1[index] = data.s1;
-                //     s2[index] = data.s2;
-                //     s3[index] = data.s3;
-                //     date[index] = data.date;
-                // }
-                // console.log(s1);
-                if (mychart2) {
-                    mychart2.data.labels.push(data.date);
-                     mychart2.data.datasets[0].data.push(data.s1);
-                     mychart2.data.datasets[1].data.push(data.s2);
-                     mychart2.data.datasets[2].data.push(data.s3);
-                     mychart2.update(); 
-                }else{
-                        mychart2 = new Chart(ctx1, {
-                        type: 'bar',
-                        data: {
-                            labels: date,
-                            datasets: [
-                                {
-                                label: 'sensor1',
-                                data: s1,
-                                borderWidth: 1
-                            },
-                        {
-                            label: 'sensor2',
-                            data: s2,
-                            borderWidth: 1
-                        },{
-                            label: 'sensor3',
-                            data: s3,
-                            borderWidth: 1
-                        }
-                    ]
-                        },
-                        options: { }
-                    });
-                }
-            }
-            let mychart2;
-            setInterval(getchartdata1,5000);
 
             function startLiveUpdate(){
             const textViewCount1 = document.getElementById('s1');
