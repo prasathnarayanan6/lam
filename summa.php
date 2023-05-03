@@ -53,7 +53,7 @@ elseif($id=="xy2waveguide")
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
      const ctx = document.getElementById('myChart');
-     const url = "https://da5b-171-78-190-223.ngrok-free.app/lam/data.php";
+     const url = "https://7a88-183-82-31-174.ngrok-free.app/lam/data.php";
     <?php 
     if($id=="xy1waveguide")
     {

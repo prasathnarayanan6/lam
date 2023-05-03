@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['identity']) && !isset($_SESSION['email'])){
+    header('location:index');
+	  die();
+}
+?>	
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,6 +103,12 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
 .line {
   border-top: 1px solid black;
+}
+.fixed-logout {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  opacity: 0.6;
 }
     </style>
 
@@ -201,6 +214,9 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                     </div>
                 </div>
             </div><!--row--->
+            <div class="fixed-logout ml-auto">
+                    <a href="logout.php" class="btn btn-danger"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            </div>  
             
   </div>
   

@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!isset($_SESSION['identity']) && !isset($_SESSION['email'])){
+    header('location:index');
+	  die();
+}	
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -357,7 +364,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
             const textViewCount9 = document.getElementById('s9');
             const textViewCount10 = document.getElementById('s10');
             setInterval(function() {
-               fetch('https://da5b-171-78-190-223.ngrok-free.app/lam/data.php').then(function(response){
+               fetch('https://7a88-183-82-31-174.ngrok-free.app/lam/data.php').then(function(response){
                   return response.json();
                }).then(function(data){
                   textViewCount1.textContent = data.s1;
