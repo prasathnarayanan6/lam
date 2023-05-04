@@ -15,6 +15,6 @@ date_default_timezone_set('Asia/Kolkata');
 $date = date("Y-m-d_H:i:s");
 $sql = "INSERT INTO data(id, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, date) VALUES('$id', '$s1', '$s2', '$s3', '$s4', '$s5', '$s6', '$s7', '$s8', '$s9', '$s10', '$date')";
 if($conn->query($sql)){
-    echo "INSERTED SUCCESSFULLY";
+    echo "INSERTED SUCCESSFULL";
 }
 ?>
